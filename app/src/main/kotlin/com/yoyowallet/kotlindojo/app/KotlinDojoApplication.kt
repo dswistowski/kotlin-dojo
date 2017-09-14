@@ -1,4 +1,4 @@
-package com.yoyowallet.kotlindojo
+package com.yoyowallet.kotlindojo.app
 
 import android.app.Application
 
