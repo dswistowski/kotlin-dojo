@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Kotlin Dojo</string>
+    <string name="com_spotify_sdk_redirect_scheme">yoyowallet</string>
+    <string name="com_spotify_sdk_redirect_host">kotlindojo</string>
 </resources>
