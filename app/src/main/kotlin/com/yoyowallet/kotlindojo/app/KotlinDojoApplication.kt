@@ -7,6 +7,6 @@ class KotlinDojoApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        val adapter = SpotifyApi.getAdapter()
+
     }
 }

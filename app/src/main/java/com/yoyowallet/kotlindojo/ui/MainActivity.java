@@ -8,6 +8,7 @@ import com.spotify.sdk.android.authentication.AuthenticationClient;
 import com.spotify.sdk.android.authentication.AuthenticationRequest;
 import com.spotify.sdk.android.authentication.AuthenticationResponse;
 import com.yoyowallet.kotlindojo.R;
+import com.yoyowallet.kotlindojo.io.SpotifyApi;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     // Request code will be used to verify if result comes from the login activity. Can be set to any integer.
     private static final int REQUEST_CODE = 1337;
     private static final String REDIRECT_URI = "yourcustomprotocol://callback";
-    private static final String CLIENT_ID = "yoyowallet://kotlindojo";
+    private static final String CLIENT_ID = "cf057dec516f4fe8a19d90f3c5abe332";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +43,9 @@ public class MainActivity extends AppCompatActivity {
             switch (response.getType()) {
                 // Response was successful and contains auth token
                 case TOKEN:
-                    // Handle successful response
+                    SpotifyApi.INSTANCE.setToken(response.getAccessToken());
+
+                    SpotifyApi.
                     break;
 
                 // Auth flow returned an error
