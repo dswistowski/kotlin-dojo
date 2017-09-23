@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit
 /**
  * Created by enzobelli on 16/09/2017.
  */
-private const val SPOTIFY_WEB_API_ENDPOINT = "https://api.spotify.com/v1"
+private const val SPOTIFY_WEB_API_ENDPOINT = "https://api.spotify.com/v1/"
 
 object SpotifyApi {
 
