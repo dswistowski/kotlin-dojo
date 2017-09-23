@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.support.design.widget.FloatingActionButton
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
+import android.util.Log
 import android.view.View
 import com.yoyowallet.kotlindojo.R
 import com.yoyowallet.kotlindojo.io.SpotifyApi
@@ -22,8 +23,8 @@ class NewReleasesActivity : AppCompatActivity(), Callback<Albums> {
         setSupportActionBar(toolbar)
 
         val fab = findViewById(R.id.fab) as FloatingActionButton
-        fab.setOnClickListener(View.OnClickListener { view ->
-            val newReleases = SpotifyApi.service.getNewReleases(null)
+        fab.setOnClickListener({
+            val newReleases = SpotifyApi.service.getNewReleases()
             newReleases.enqueue(this)
         })
     }
@@ -34,10 +35,10 @@ class NewReleasesActivity : AppCompatActivity(), Callback<Albums> {
 
     override fun onResponse(call: Call<Albums>?, response: Response<Albums>) {
         if (response.isSuccessful) {
-            val album = response.body()
-           System.out.println(album.items.toString())
+
         } else {
-            System.out.println(response.errorBody())
+            Log.e("Error", "" + response.code())
+            Log.e("Error",response.errorBody().toString())
         }
     }
 

@@ -16,7 +16,7 @@ interface SpotifyService {
      * @return A callback containing object with the featured playlists
      * @see <a href="https://developer.spotify.com/web-api/get-list-featured-playlists/">Get a List of Featured Playlists</a>
      */
-    @GET("/browse/featured-playlists")
+    @GET("v1//browse/featured-playlists")
     fun getFeaturedPlaylists(@QueryMap options: Map<String, Any>?): Call<Unit>
 
     /**
@@ -27,8 +27,8 @@ interface SpotifyService {
      * @return A callback containing object with the new album releases
      * @see <a href="https://developer.spotify.com/web-api/get-list-new-releases/">Get a List of New Releases</a>
      */
-    @GET("/browse/new-releases")
-    fun getNewReleases(@QueryMap options: Map<String, Any>?): Call<Albums>
+    @GET("v1/browse/new-releases")
+    fun getNewReleases(): Call<Albums>
 
     /**
      * Retrieve Spotify categories. Categories used to tag items in
@@ -38,7 +38,7 @@ interface SpotifyService {
      * @return A callback containing categories.
      * @see <a href="https://developer.spotify.com/web-api/get-list-categories/">Get a List of Categories</a>
      */
-    @GET("/browse/categories")
+    @GET("v1//browse/categories")
     fun getCategories(@QueryMap options: Map<String, Any>?): Call<Unit>
 
     /**
@@ -49,7 +49,7 @@ interface SpotifyService {
      * @return A callback containing a Spotify category.
      * @see <a href="https://developer.spotify.com/web-api/get-category/">Get a Spotify Category</a>
      */
-    @GET("/browse/categories/{category_id}")
+    @GET("v1//browse/categories/{category_id}")
     fun getCategory(@Path("category_id") categoryId: String, @QueryMap options: Map<String, Any>?): Call<Unit>
 
     /**
@@ -60,6 +60,6 @@ interface SpotifyService {
      * @return A callback containing playlists for a Spotify Category.
      * @see <a href="https://developer.spotify.com/web-api/get-categorys-playlists/">Get playlists for a Spotify Category</a>
      */
-    @GET("/browse/categories/{category_id}/playlists")
+    @GET("v1//browse/categories/{category_id}/playlists")
     fun getPlaylistsCategory(@Path("category_id") categoryId: String, @QueryMap options: Map<String, Any>?): Call<Unit>
 }
