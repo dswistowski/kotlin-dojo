@@ -15,7 +15,7 @@ private const val SPOTIFY_WEB_API_ENDPOINT = "https://api.spotify.com/v1"
 object SpotifyApi {
 
     lateinit var token: String
-    private val service by lazy { restAdapter.create(SpotifyService::class.java) }
+    val service by lazy { restAdapter.create(SpotifyService::class.java) }
     private val client by lazy {
         OkHttpClient.Builder()
                 .addInterceptor({ chain ->

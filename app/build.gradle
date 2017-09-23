@@ -23,6 +23,15 @@ android {
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
+    signingConfigs {
+        def rootPath = project.getRootDir().path
+        debug {
+            storeFile file("$rootPath/app/keystore/keystore.jks")
+            storePassword "yoyo2017"
+            keyAlias "kotlindojo"
+            keyPassword "yoyo2017"
+        }
+    }
 }
 
 dependencies {
@@ -41,5 +50,6 @@ dependencies {
     compile 'com.google.code.gson:gson:2.7'
     compile 'com.spotify.android:auth:1.0.0-alpha'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:design:26.+'
     testCompile 'junit:junit:4.12'
 }
