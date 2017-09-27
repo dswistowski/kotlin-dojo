@@ -8,4 +8,6 @@
     tools:context="com.yoyowallet.kotlindojo.ui.NewReleasesActivity"
     tools:showIn="@layout/activity_new_releases">
 
+
+
 </android.support.constraint.ConstraintLayout>

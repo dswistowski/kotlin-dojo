@@ -15,6 +15,7 @@ object SpotifyApi {
 
     lateinit var token: String
     val service by lazy { restAdapter.create(SpotifyService::class.java) }
+
     private val client by lazy {
         val logging = HttpLoggingInterceptor()
         logging.level = HttpLoggingInterceptor.Level.BODY

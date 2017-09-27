@@ -1,5 +1,6 @@
 package com.yoyowallet.kotlindojo.io.webservice
 
+import com.yoyowallet.kotlindojo.domain.GetNewReleasesReponse
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -15,8 +16,8 @@ interface SpotifyService {
      * @return A callback containing object with the featured playlists
      * @see <a href="https://developer.spotify.com/web-api/get-list-featured-playlists/">Get a List of Featured Playlists</a>
      */
-    @GET("v1//browse/featured-playlists")
-    fun getFeaturedPlaylists(@QueryMap options: Map<String, Any>?): Call<Unit>
+    @GET("v1/browse/featured-playlists")
+    fun getFeaturedPlaylists(@QueryMap options: Map<String, String>?): Call<Unit>
 
     /**
      * Get a list of new album releases featured in Spotify (shown, for example, on a Spotify player’s “Browse” tab).
@@ -27,7 +28,7 @@ interface SpotifyService {
      * @see <a href="https://developer.spotify.com/web-api/get-list-new-releases/">Get a List of New Releases</a>
      */
     @GET("v1/browse/new-releases")
-    fun getNewReleases(): Call<Unit>
+    fun getNewReleases(): Call<GetNewReleasesReponse>
 
     /**
      * Retrieve Spotify categories. Categories used to tag items in

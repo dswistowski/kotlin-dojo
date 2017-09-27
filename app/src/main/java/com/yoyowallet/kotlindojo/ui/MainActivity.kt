@@ -12,7 +12,7 @@ import com.yoyowallet.kotlindojo.R
 import com.yoyowallet.kotlindojo.io.SpotifyApi
 import com.yoyowallet.kotlindojo.io.webservice.SpotifyService
 
-import data.Albums
+// import data.Albums
 import retrofit2.Call
 
 class MainActivity : AppCompatActivity() {
