@@ -24,11 +24,13 @@ All the library needed for the excercise are imported
 
 Composing Suspending Functions (https://github.com/Kotlin/kotlinx.coroutines/blob/master/coroutines-guide.md#composing-suspending-functions)
 
->! You may need to implement a `suspending` function that returns a `suspendCoroutine` and that is called from an `async` block
+> You may need to implement a `suspending` function that returns a `suspendCoroutine` and that is called from an `async` block
 
 ### Anko Documentation
 
 Anko Layouts (https://github.com/Kotlin/anko/wiki/Anko-Layouts#using-anko-layouts-in-your-project)
+
+> There's no need to add the `setContentView` Anko sets content views automatically
 
 ### Kotlin Collections Documentation
 https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html
