@@ -5,6 +5,12 @@
 - Kotlin plugin (https://blog.jetbrains.com/kotlin/2013/08/working-with-kotlin-in-android-studio/)
 - Android SDK 26
 
+## Description
+##### Connect to the `Spotyfy` Api, retrieve and display information
+The Spotify SDK is already configured
+All the library needed for the excercise are imported
+
+
 ## Tasks
 
 1) Choose an Api to call between the one implemented in *SpotifyService.kt*
@@ -17,6 +23,8 @@
 ### Coroutine Documentation
 
 Composing Suspending Functions (https://github.com/Kotlin/kotlinx.coroutines/blob/master/coroutines-guide.md#composing-suspending-functions)
+
+>!You may need to implement a `suspending` function that returns a `suspendCoroutine` and that is called from an `async` block
 
 ### Anko Documentation
 
