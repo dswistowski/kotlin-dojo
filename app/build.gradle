@@ -33,6 +33,7 @@ android {
         }
     }
 }
+kotlin { experimental { coroutines 'enable' } }
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
@@ -51,6 +52,8 @@ dependencies {
     compile 'com.squareup.okhttp3:logging-interceptor:3.5.0'
     compile 'com.spotify.android:auth:1.0.0-alpha'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    compile 'com.android.support:design:26.+'
+    compile 'com.android.support:design:26.0.0-alpha1'
+    compile 'org.jetbrains.kotlinx:kotlinx-coroutines-core:0.18'
+    compile 'org.jetbrains.anko:anko:0.10.1'
     testCompile 'junit:junit:4.12'
 }

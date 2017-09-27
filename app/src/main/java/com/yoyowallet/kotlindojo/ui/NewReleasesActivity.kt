@@ -4,17 +4,9 @@ import android.os.Bundle
 import android.support.design.widget.FloatingActionButton
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
-import android.util.Log
-import android.view.View
 import com.yoyowallet.kotlindojo.R
-import com.yoyowallet.kotlindojo.io.SpotifyApi
-import data.Albums
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 
-
-class NewReleasesActivity : AppCompatActivity(), Callback<Albums> {
+class NewReleasesActivity : AppCompatActivity(){
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,22 +16,8 @@ class NewReleasesActivity : AppCompatActivity(), Callback<Albums> {
 
         val fab = findViewById(R.id.fab) as FloatingActionButton
         fab.setOnClickListener({
-            val newReleases = SpotifyApi.service.getNewReleases()
-            newReleases.enqueue(this)
+
+            //TODO Call the API!
         })
     }
-
-    override fun onFailure(call: Call<Albums>?, t: Throwable?) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-
-    override fun onResponse(call: Call<Albums>?, response: Response<Albums>) {
-        if (response.isSuccessful) {
-
-        } else {
-            Log.e("Error", "" + response.code())
-            Log.e("Error",response.errorBody().toString())
-        }
-    }
-
 }

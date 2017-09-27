@@ -1,6 +1,5 @@
 package com.yoyowallet.kotlindojo.io.webservice
 
-import data.Albums
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -28,7 +27,7 @@ interface SpotifyService {
      * @see <a href="https://developer.spotify.com/web-api/get-list-new-releases/">Get a List of New Releases</a>
      */
     @GET("v1/browse/new-releases")
-    fun getNewReleases(): Call<Albums>
+    fun getNewReleases(): Call<Unit>
 
     /**
      * Retrieve Spotify categories. Categories used to tag items in
