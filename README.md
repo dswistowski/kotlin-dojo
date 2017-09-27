@@ -24,7 +24,7 @@ All the library needed for the excercise are imported
 
 Composing Suspending Functions (https://github.com/Kotlin/kotlinx.coroutines/blob/master/coroutines-guide.md#composing-suspending-functions)
 
->!You may need to implement a `suspending` function that returns a `suspendCoroutine` and that is called from an `async` block
+>! You may need to implement a `suspending` function that returns a `suspendCoroutine` and that is called from an `async` block
 
 ### Anko Documentation
 
